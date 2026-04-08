@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Product Management Certification 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+
+  --bg: #060c18;
+
+  --surface: #0b1525;
+
+  --surface2: #0f1d33;
+
+  --surface3: #13243d;
+
+  --border: rgba(80,160,255,0.1);
+
+  --border2: rgba(80,160,255,0.2);
+
+  --sky: #38bdf8;
+
+  --violet: #818cf8;
+
+  --gold: #f59e0b;
+
+  --emerald: #10b981;
+
+  --rose: #f43f5e;
+
+  --cyan: #06b6d4;
+
+  --orange: #fb923c;
+
+  --text: #ddeeff;
+
+  --muted: #6b8aad;
+
+  --dim: #3a5272;
+
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior:smooth; }
+
+body {
+
+  background:var(--bg);
+
+  color:var(--text);
+
+  font-family:'DM Sans',sans-serif;
+
+  font-weight:300;
+
+  line-height:1.7;
+
+  overflow-x:hidden;
+
+}
+
+
+
+/* GLOW BG */
+
+body::after {
+
+  content:'';
+
+  position:fixed; top:-200px; left:-200px;
+
+  width:900px; height:900px;
+
+  background:radial-gradient(circle,rgba(37,99,235,.1) 0%,transparent 65%);
+
+  pointer-events:none; z-index:0;
+
+}
+
+
+
+/* ── HERO ── */
+
+.hero {
+
+  position:relative; z-index:1;
+
+  padding:72px 64px 48px;
+
+}
+
+.eyebrow {
+
+  font-family:'Syne',sans-serif;
+
+  font-size:10px; font-weight:700;
+
+  letter-spacing:3.5px; text-transform:uppercase;
+
+  color:var(--sky); margin-bottom:20px;
+
+  display:flex; align-items:center; gap:10px;
+
+}
+
+.eyebrow::before { content:''; width:28px; height:2px; background:var(--sky); display:inline-block; }
+
+h1 {
+
+  font-family:'Syne',sans-serif;
+
+  font-size:clamp(2.4rem,5vw,4rem);
+
+  font-weight:800; line-height:1.04;
+
+  letter-spacing:-2px; margin-bottom:8px;
+
+  background:linear-gradient(130deg,#e8f4ff 20%,var(--sky) 100%);
+
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+
+}
+
+.hero-sub-title {
+
+  font-family:'DM Sans',sans-serif;
+
+  font-size:1rem; color:var(--muted);
+
+  font-style:italic; margin-bottom:28px;
+
+}
+
+.hero-stats { display:flex; gap:44px; flex-wrap:wrap; margin-bottom:36px; }
+
+.stat { display:flex; flex-direction:column; }
+
+.stat-num {
+
+  font-family:'Syne',sans-serif;
+
+  font-size:1.9rem; font-weight:800;
+
+  color:var(--sky); letter-spacing:-1px;
+
+}
+
+.stat-label { font-size:.7rem; color:var(--muted); text-transform:uppercase; letter-spacing:1.5px; }
+
+
+
+.books { display:flex; gap:10px; flex-wrap:wrap; }
+
+.book-chip {
+
+  display:inline-flex; align-items:center; gap:6px;
+
+  padding:5px 13px; border-radius:6px;
+
+  border:1px solid rgba(245,158,11,.22);
+
+  background:rgba(245,158,11,.07);
+
+  font-size:.73rem; color:var(--gold); font-weight:400;
+
+}
+
+.book-chip::before { content:'📖'; font-size:.8rem; }
+
+
+
+/* DIVIDER */
+
+.divider {
+
+  position:relative; z-index:1;
+
+  height:1px; margin:8px 0 48px;
+
+  background:linear-gradient(90deg,transparent,var(--border2),transparent);
+
+}
+
+
+
+/* ── MODULES ── */
+
+.modules { position:relative; z-index:1; padding:0 64px 72px; }
+
+
+
+.module-card {
+
+  background:var(--surface);
+
+  border:1px solid var(--border);
+
+  border-radius:20px; overflow:hidden;
+
+  margin-bottom:28px; position:relative;
+
+  transition:border-color .3s, box-shadow .3s;
+
+}
+
+.module-card:hover {
+
+  border-color:var(--border2);
+
+  box-shadow:0 0 48px rgba(37,99,235,.07);
+
+}
+
+.accent-bar {
+
+  position:absolute; left:0; top:0; bottom:0;
+
+  width:3px; border-radius:3px 0 0 3px;
+
+}
+
+.m1 .accent-bar { background:linear-gradient(180deg,#2563eb,#38bdf8); }
+
+.m2 .accent-bar { background:linear-gradient(180deg,#10b981,#34d399); }
+
+.m3 .accent-bar { background:linear-gradient(180deg,#8b5cf6,#a78bfa); }
+
+.m4 .accent-bar { background:linear-gradient(180deg,#f59e0b,#fb923c); }
+
+.m5 .accent-bar { background:linear-gradient(180deg,#f43f5e,#fb7185); }
+
+.m6 .accent-bar { background:linear-gradient(180deg,#06b6d4,#38bdf8); }
+
+
+
+/* header */
+
+.mod-header {
+
+  padding:34px 40px 0 52px;
+
+  display:flex; align-items:flex-start; gap:20px;
+
+}
+
+.mod-num {
+
+  font-family:'Syne',sans-serif;
+
+  font-size:4.5rem; font-weight:800;
+
+  line-height:1; letter-spacing:-4px;
+
+  flex-shrink:0; margin-top:-8px;
+
+  color:rgba(56,189,248,.1);
+
+}
+
+.mod-meta {}
+
+.mod-badge {
+
+  display:inline-block;
+
+  font-family:'Syne',sans-serif;
+
+  font-size:9px; font-weight:700;
+
+  letter-spacing:2.5px; text-transform:uppercase;
+
+  padding:4px 10px; border-radius:4px; margin-bottom:10px;
+
+}
+
+.m1 .mod-badge { background:rgba(37,99,235,.15); color:#60a5fa; border:1px solid rgba(37,99,235,.3); }
+
+.m2 .mod-badge { background:rgba(16,185,129,.15); color:#34d399; border:1px solid rgba(16,185,129,.3); }
+
+.m3 .mod-badge { background:rgba(139,92,246,.15); color:#a78bfa; border:1px solid rgba(139,92,246,.3); }
+
+.m4 .mod-badge { background:rgba(245,158,11,.15); color:#fbbf24; border:1px solid rgba(245,158,11,.3); }
+
+.m5 .mod-badge { background:rgba(244,63,94,.15); color:#fb7185; border:1px solid rgba(244,63,94,.3); }
+
+.m6 .mod-badge { background:rgba(6,182,212,.15); color:#22d3ee; border:1px solid rgba(6,182,212,.3); }
+
+
+
+.mod-title {
+
+  font-family:'Syne',sans-serif;
+
+  font-size:1.28rem; font-weight:700;
+
+  color:#fff; letter-spacing:-.3px;
+
+  line-height:1.3; margin-bottom:5px;
+
+}
+
+.mod-desc {
+
+  font-size:.84rem; color:var(--muted);
+
+  font-style:italic; max-width:640px;
+
+  line-height:1.6;
+
+}
+
+
+
+/* body */
+
+.mod-body {
+
+  padding:24px 40px 32px 52px;
+
+  display:grid;
+
+  grid-template-columns:1.05fr 1fr 1fr;
+
+  gap:18px;
+
+}
+
+@media(max-width:960px){
+
+  .mod-body { grid-template-columns:1fr; }
+
+  .hero,.modules { padding-left:24px; padding-right:24px; }
+
+  .mod-header { padding-left:28px; }
+
+  .mod-body { padding-left:28px; }
+
+}
+
+
+
+.block {
+
+  background:var(--surface2);
+
+  border:1px solid var(--border);
+
+  border-radius:14px; padding:22px;
+
+  display:flex; flex-direction:column;
+
+}
+
+.blabel {
+
+  font-family:'Syne',sans-serif;
+
+  font-size:9px; font-weight:700;
+
+  letter-spacing:2.5px; text-transform:uppercase;
+
+  margin-bottom:14px;
+
+  display:flex; align-items:center; gap:7px;
+
+}
+
+.blabel .pip { width:5px; height:5px; border-radius:50%; background:currentColor; flex-shrink:0; }
+
+
+
+/* content */
+
+.content .blabel { color:var(--sky); }
+
+.intro { font-size:.84rem; color:#9bb8d8; line-height:1.78; margin-bottom:14px; }
+
+.ilist { list-style:none; display:flex; flex-direction:column; gap:8px; }
+
+.ilist li {
+
+  font-size:.8rem; color:#7a9abf;
+
+  display:flex; gap:8px; align-items:flex-start;
+
+}
+
+.ilist li::before { content:'→'; color:var(--sky); flex-shrink:0; margin-top:1px; }
+
+.ilist li strong { color:#b0cce8; font-weight:500; }
+
+.tags { display:flex; flex-wrap:wrap; gap:5px; margin-top:12px; }
+
+.tag {
+
+  font-size:.68rem; font-weight:500;
+
+  padding:3px 8px; border-radius:4px;
+
+  background:rgba(129,140,248,.1);
+
+  color:var(--violet);
+
+  border:1px solid rgba(129,140,248,.2);
+
+}
+
+
+
+/* trends */
+
+.trends .blabel { color:#a78bfa; }
+
+.titem {
+
+  font-size:.8rem; color:#7a9abf;
+
+  padding:9px 0;
+
+  border-bottom:1px solid rgba(80,160,255,.07);
+
+  display:flex; gap:9px; align-items:flex-start;
+
+}
+
+.titem:last-child { border-bottom:none; }
+
+.titem strong { color:#b0cce8; font-weight:500; }
+
+.ticon { flex-shrink:0; font-size:.85rem; line-height:1.6; }
+
+
+
+/* practice */
+
+.practice {
+
+  background:linear-gradient(140deg,rgba(15,29,56,1) 0%,rgba(18,36,68,.8) 100%);
+
+  border:1px solid rgba(37,99,235,.28);
+
+}
+
+.practice .blabel { color:var(--gold); }
+
+.pname {
+
+  font-family:'Syne',sans-serif;
+
+  font-size:.93rem; font-weight:700;
+
+  color:#fff; margin-bottom:8px; line-height:1.3;
+
+}
+
+.pdesc { font-size:.8rem; color:#7a9abf; margin-bottom:14px; line-height:1.72; }
+
+.psteps { list-style:none; display:flex; flex-direction:column; gap:8px; counter-reset:step; }
+
+.psteps li {
+
+  font-size:.78rem; color:#7090b8;
+
+  display:flex; gap:10px; align-items:flex-start;
+
+  counter-increment:step;
+
+}
+
+.psteps li::before {
+
+  content:counter(step);
+
+  min-width:20px; height:20px;
+
+  display:flex; align-items:center; justify-content:center;
+
+  background:rgba(37,99,235,.25); color:var(--sky);
+
+  border-radius:50%; font-size:.65rem; font-weight:700;
+
+  font-family:'Syne',sans-serif; flex-shrink:0; margin-top:1px;
+
+}
+
+.psteps li strong { color:#a0c0e0; font-weight:500; }
+
+.deliverable {
+
+  margin-top:14px;
+
+  display:inline-flex; align-items:center; gap:6px;
+
+  font-size:.72rem; font-weight:500;
+
+  background:rgba(245,158,11,.1); color:var(--gold);
+
+  border:1px solid rgba(245,158,11,.22);
+
+  border-radius:6px; padding:5px 10px;
+
+}
+
+
+
+/* ── MASTERY ── */
+
+.mastery {
+
+  position:relative; z-index:1;
+
+  margin:0 64px 80px;
+
+  background:linear-gradient(135deg,var(--surface2),var(--surface3));
+
+  border:1px solid rgba(245,158,11,.18);
+
+  border-radius:20px; padding:44px 48px;
+
+  overflow:hidden;
+
+}
+
+.mastery::before {
+
+  content:'';
+
+  position:absolute; top:-80px; right:-80px;
+
+  width:400px; height:400px;
+
+  background:radial-gradient(circle,rgba(245,158,11,.07) 0%,transparent 65%);
+
+  pointer-events:none;
+
+}
+
+.mastery-title {
+
+  font-family:'Syne',sans-serif;
+
+  font-size:1.5rem; font-weight:800;
+
+  color:#fff; letter-spacing:-.5px; margin-bottom:6px;
+
+}
+
+.mastery-sub { font-size:.87rem; color:var(--muted); margin-bottom:34px; }
+
+.mastery-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; }
+
+@media(max-width:768px){
+
+  .mastery-grid { grid-template-columns:1fr; }
+
+  .mastery { margin:0 24px 60px; padding:28px 24px; }
+
+}
+
+.mcard {
+
+  background:rgba(6,12,24,.5);
+
+  border:1px solid var(--border);
+
+  border-radius:14px; padding:24px;
+
+}
+
+.mcard-icon { font-size:1.5rem; margin-bottom:12px; }
+
+.mcard-title {
+
+  font-family:'Syne',sans-serif;
+
+  font-size:.88rem; font-weight:700;
+
+  color:#fff; margin-bottom:8px;
+
+}
+
+.mcard-body { font-size:.8rem; color:var(--muted); line-height:1.72; }
+
+.mcard-body strong { color:#b0cce8; font-weight:500; }
+
+.mhighlight {
+
+  display:inline-block; margin-top:10px;
+
+  padding:4px 10px; border-radius:5px;
+
+  font-size:.72rem; font-weight:500;
+
+  background:rgba(245,158,11,.1); color:var(--gold);
+
+  border:1px solid rgba(245,158,11,.2);
+
+}
+
+
+
+/* FOOTER */
+
+.footer {
+
+  position:relative; z-index:1;
+
+  border-top:1px solid var(--border);
+
+  padding:26px 64px;
+
+  display:flex; justify-content:space-between;
+
+  align-items:center; flex-wrap:wrap; gap:12px;
+
+}
+
+.footer-brand {
+
+  font-family:'Syne',sans-serif;
+
+  font-size:.78rem; font-weight:700;
+
+  color:var(--dim); letter-spacing:2px; text-transform:uppercase;
+
+}
+
+.footer-note { font-size:.71rem; color:rgba(80,120,170,.4); }
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="eyebrow">Edición Definitiva · CPO Framework 2026</div>
+
+  <h1>Product Management<br>Certification</h1>
+
+  <p class="hero-sub-title">Master the core skills to build products customers love</p>
+
+  <div class="hero-stats">
+
+    <div class="stat"><span class="stat-num">6</span><span class="stat-label">Módulos</span></div>
+
+    <div class="stat"><span class="stat-num">12+</span><span class="stat-label">Prácticas</span></div>
+
+    <div class="stat"><span class="stat-num">AI</span><span class="stat-label">Integrado</span></div>
+
+    <div class="stat"><span class="stat-num">360°</span><span class="stat-label">Cobertura del Rol</span></div>
+
+  </div>
+
+  <div class="books">
+
+    <span class="book-chip">Inspired · Marty Cagan</span>
+
+    <span class="book-chip">Continuous Discovery · Teresa Torres</span>
+
+    <span class="book-chip">Obviously Awesome · April Dunford</span>
+
+    <span class="book-chip">The Lean Startup · Eric Ries</span>
+
+  </div>
+
+</section>
+
+
+
+<div class="divider"></div>
+
+
+
+<div class="modules">
+
+
+
+  <!-- ══ MODULE 1 ══ -->
+
+  <div class="module-card m1">
+
+    <div class="accent-bar"></div>
+
+    <div class="mod-header">
+
+      <div class="mod-num">01</div>
+
+      <div class="mod-meta">
+
+        <span class="mod-badge">Módulo 1 · Mindset & Identidad</span>
+
+        <div class="mod-title">Develop Strategic Product Thinking</div>
+
+        <div class="mod-desc">Shift from executing tasks to driving strategic outcomes. Learn the core responsibilities, essential soft skills, and foundational mindset of a modern Product Manager.</div>
+
+      </div>
+
+    </div>
+
+    <div class="mod-body">
+
+      <div class="block content">
+
+        <div class="blabel"><span class="pip"></span>Contenido Central</div>
+
+        <p class="intro">Este es el módulo de identidad. Antes de cualquier framework o herramienta, el PM debe entender qué es — y qué no es — su rol. El salto de ejecutor a estratega no es técnico: es una transformación de mentalidad que requiere nuevas responsabilidades, nuevas habilidades relacionales y una forma diferente de medir el éxito propio.</p>
+
+        <ul class="ilist">
+
+          <li><strong>Las 3 responsabilidades core del PM moderno:</strong> descubrir el problema correcto, definir la solución de mayor valor, y alinear al equipo para ejecutarla</li>
+
+          <li><strong>Influencia sin autoridad:</strong> cómo liderar un equipo cross-funcional sin tener reporte directo sobre nadie</li>
+
+          <li><strong>Soft skills esenciales:</strong> comunicación ejecutiva, gestión de stakeholders, negociación de prioridades y resiliencia ante la ambigüedad</li>
+
+          <li><strong>Del output al outcome:</strong> dejar de medir el éxito por features entregados y empezar a medirlo por resultados generados para el usuario y el negocio</li>
+
+          <li><strong>El triángulo de decisión del PM:</strong> viabilidad de negocio, factibilidad técnica y valor para el usuario — cómo navegar la tensión entre los tres</li>
+
+          <li><strong>El PM como conector:</strong> traducir entre el lenguaje del negocio, el de la tecnología y el del usuario sin perder fidelidad en ninguna dirección</li>
+
+        </ul>
+
+        <div class="tags">
+
+          <span class="tag">Outcome Mindset</span>
+
+          <span class="tag">Soft Skills</span>
+
+          <span class="tag">Influencia sin Autoridad</span>
+
+          <span class="tag">Identidad del PM</span>
+
+        </div>
+
+      </div>
+
+      <div class="block trends">
+
+        <div class="blabel"><span class="pip"></span>Tendencias 2026</div>
+
+        <div class="titem"><span class="ticon">🔄</span><div><strong>El fin del PM como proxy del cliente:</strong> en 2026 los PMs de élite tienen contacto directo y continuo con usuarios reales — no delegan el entendimiento del problema a UX Research</div></div>
+
+        <div class="titem"><span class="ticon">🤖</span><div><strong>PM + IA como dupla base:</strong> el PM moderno usa LLMs como extensión cognitiva para sintetizar información, generar opciones y acelerar decisiones — no como reemplazo del juicio humano sino como amplificador</div></div>
+
+        <div class="titem"><span class="ticon">📊</span><div><strong>Accountability de métricas de negocio:</strong> los mejores PMs en 2026 son dueños de un P&L implícito — responden por revenue, retención y crecimiento, no solo por entregas del sprint</div></div>
+
+        <div class="titem"><span class="ticon">🧠</span><div><strong>Pensamiento sistémico obligatorio:</strong> entender cómo las decisiones de producto crean efectos de segundo y tercer orden — un feature nuevo puede canibalizar otro producto o crear deuda organizacional</div></div>
+
+        <div class="titem"><span class="ticon">🌐</span><div><strong>PM con marca personal:</strong> los PMs más influyentes construyen credibilidad pública documentando su proceso — LinkedIn, newsletters y comunidades de producto como extensión de su impacto</div></div>
+
+      </div>
+
+      <div class="block practice">
+
+        <div class="blabel"><span class="pip"></span>Laboratorio Práctico</div>
+
+        <div class="pname">🧭 Autopsia del Rol + Press Release de Identidad</div>
+
+        <p class="pdesc">Antes de aprender a hacer producto, necesitas entender con honestidad quién eres como PM hoy y quién necesitas ser. Dos ejercicios de autoconocimiento estratégico.</p>
+
+        <ol class="psteps">
+
+          <li><strong>Autopsia del Rol:</strong> lista las últimas 10 tareas que hiciste en tu trabajo. Clasifica cada una: ¿fue ejecutar una tarea o generar un outcome? Calcula tu ratio actual de PM ejecutor vs. PM estratega</li>
+
+          <li>Identifica los <strong>3 stakeholders</strong> que más fricción generan en tu trabajo actual. Para cada uno, escribe qué necesitan realmente (no lo que piden) y cómo comunicarías tu posición de forma que perciban su beneficio</li>
+
+          <li>Escribe un <strong>Press Release personal</strong> al estilo Amazon: "En 12 meses, [tu nombre] transformó [problema de negocio] generando [resultado medible] para [usuario]" — sin mencionar features ni tecnología</li>
+
+          <li>Define tu <strong>North Star personal</strong> como PM: ¿qué métrica de negocio quieres que mejore gracias a tu trabajo este año? Escríbela con número y fecha</li>
+
+          <li>Comparte el Press Release con alguien de tu equipo y documenta si entienden el impacto sin que tengas que explicar nada</li>
+
+        </ol>
+
+        <span class="deliverable">📄 Ratio Ejecutor/Estratega + Press Release Personal + North Star del PM</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ══ MODULE 2 ══ -->
+
+  <div class="module-card m2">
+
+    <div class="accent-bar"></div>
+
+    <div class="mod-header">
+
+      <div class="mod-num">02</div>
+
+      <div class="mod-meta">
+
+        <span class="mod-badge">Módulo 2 · Discovery & Research</span>
+
+        <div class="mod-title">Discover Product Opportunities via Qualitative Signals</div>
+
+        <div class="mod-desc">Uncover high-value opportunities through advanced discovery and user research. Learn to balance customer insights with business goals to build products that meet real user needs.</div>
+
+      </div>
+
+    </div>
+
+    <div class="mod-body">
+
+      <div class="block content">
+
+        <div class="blabel"><span class="pip"></span>Contenido Central</div>
+
+        <p class="intro">El discovery no es una fase que se "completa" — es el proceso permanente de entender qué problema vale la pena resolver antes de comprometer recursos. Aprenderás a extraer señales cualitativas de alto valor, a diseñar entrevistas que revelan motivaciones latentes, y a equilibrar lo que el usuario necesita con lo que el negocio puede y debe hacer.</p>
+
+        <ul class="ilist">
+
+          <li><strong>Continuous Discovery Habits</strong> (Teresa Torres): ritual semanal de conversaciones con usuarios como sistema operativo del PM</li>
+
+          <li><strong>Entrevistas generativas vs. evaluativas:</strong> cuándo preguntar "¿qué problema tienes?" vs. "¿funciona esta solución?"</li>
+
+          <li><strong>Jobs-To-Be-Done (JTBD):</strong> entender qué "contrata" el usuario para hacer con tu producto — la motivación profunda detrás del comportamiento</li>
+
+          <li><strong>Balancear insights de usuario con objetivos de negocio:</strong> el framework para decidir qué oportunidades perseguir cuando el usuario pide X pero el negocio necesita Y</li>
+
+          <li><strong>Opportunity Solution Tree:</strong> conectar objetivo de negocio → oportunidades de usuario → soluciones → experimentos en un árbol visual</li>
+
+          <li><strong>Signal Mining en datos no estructurados:</strong> tickets de soporte, reseñas, churn surveys y grabaciones como fuente continua de discovery</li>
+
+        </ul>
+
+        <div class="tags">
+
+          <span class="tag">Continuous Discovery</span>
+
+          <span class="tag">JTBD</span>
+
+          <span class="tag">Entrevistas Generativas</span>
+
+          <span class="tag">Opportunity Tree</span>
+
+        </div>
+
+      </div>
+
+      <div class="block trends">
+
+        <div class="blabel"><span class="pip"></span>Tendencias 2026</div>
+
+        <div class="titem"><span class="ticon">🎙️</span><div><strong>IA para síntesis de entrevistas:</strong> herramientas como Dovetail y Notion AI procesan decenas de transcripciones e identifican patrones de dolor que el ojo humano pierde — el PM ahora puede hacer discovery a escala sin perder profundidad</div></div>
+
+        <div class="titem"><span class="ticon">🔁</span><div><strong>Discovery continuo como ritual no negociable:</strong> los equipos de producto de clase mundial hablan con 2-3 usuarios cada semana sin excepción — no hay "sprint de research" porque el research nunca para</div></div>
+
+        <div class="titem"><span class="ticon">🧪</span><div><strong>Unmoderated Testing a escala:</strong> Maze y Lyssna permiten obtener 50+ respuestas en horas — el tiempo del research manual masivo y lento terminó definitivamente en 2025</div></div>
+
+        <div class="titem"><span class="ticon">⚖️</span><div><strong>El balance insights vs. negocio como competencia core:</strong> saber decir "esto es lo que el usuario quiere, pero no lo que el negocio debe construir ahora" — y defenderlo con datos — es la habilidad diferenciadora del PM senior</div></div>
+
+        <div class="titem"><span class="ticon">👥</span><div><strong>Research democratizado:</strong> entrenar a engineers y designers para hacer discovery ligero libera al PM para síntesis estratégica de mayor nivel y decisiones de mayor impacto</div></div>
+
+      </div>
+
+      <div class="block practice">
+
+        <div class="blabel"><span class="pip"></span>Laboratorio Práctico</div>
+
+        <div class="pname">🎙️ Discovery Blitz + Entrevista Double-Blind con IA</div>
+
+        <p class="pdesc">Ciclo completo de discovery en 5 días: entrevistas reales, síntesis con IA y conexión de oportunidades con objetivos de negocio concretos.</p>
+
+        <ol class="psteps">
+
+          <li>Realiza <strong>3 entrevistas JTBD</strong> de 20-25 minutos sobre un problema real — enfócate en el comportamiento pasado del usuario, no en sus opiniones sobre soluciones futuras</li>
+
+          <li>Transcribe con Otter.ai y usa un LLM con este prompt: <em>"Extrae los 3 dolores profundos que el usuario no mencionó explícitamente pero que su lenguaje y sus silencios revelan"</em></li>
+
+          <li>Identifica las oportunidades de usuario y evalúa cada una contra un objetivo de negocio real: ¿esta oportunidad mejora retención, adquisición o monetización?</li>
+
+          <li>Construye el <strong>Opportunity Solution Tree</strong>: objetivo de negocio → 4 oportunidades priorizadas → 2 soluciones por oportunidad → 1 experimento por solución</li>
+
+          <li>Escribe un brief de 1 página que justifique por qué la oportunidad #1 es la correcta tanto para el usuario como para el negocio — con datos de las entrevistas</li>
+
+        </ol>
+
+        <span class="deliverable">📄 Opportunity Solution Tree + Discovery Brief con justificación de negocio</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ══ MODULE 3 ══ -->
+
+  <div class="module-card m3">
+
+    <div class="accent-bar"></div>
+
+    <div class="mod-header">
+
+      <div class="mod-num">03</div>
+
+      <div class="mod-meta">
+
+        <span class="mod-badge">Módulo 3 · Analytics & Métricas</span>
+
+        <div class="mod-title">Use Analytics and Metrics for Data-Driven Decisions</div>
+
+        <div class="mod-desc">Go from gut feelings to evidence-backed decisions. Learn to craft strong hypotheses, define success with the right metrics, and leverage experimentation and product analytics to drive product growth.</div>
+
+      </div>
+
+    </div>
+
+    <div class="mod-body">
+
+      <div class="block content">
+
+        <div class="blabel"><span class="pip"></span>Contenido Central</div>
+
+        <p class="intro">El paso de las decisiones por intuición a las decisiones por evidencia es el salto más difícil y más valioso en la carrera de un PM. Este módulo construye el sistema completo: de la hipótesis correctamente formulada a la métrica que la valida, pasando por la analítica que revela oportunidades de crecimiento no evidentes.</p>
+
+        <ul class="ilist">
+
+          <li><strong>Hipótesis robustas:</strong> cómo formular "Si [acción] → entonces [métrica] mejorará [X%] porque [mecanismo]" — la estructura que elimina la ambigüedad de interpretación</li>
+
+          <li><strong>North Star Metric:</strong> definir la métrica que captura simultáneamente valor para el usuario y crecimiento para el negocio — y construir su árbol de inputs</li>
+
+          <li><strong>Métricas de vanidad vs. métricas de acción:</strong> por qué visitas, descargas y registros pueden mentirte sobre la salud real del producto</li>
+
+          <li><strong>Funnel Analytics avanzado:</strong> cohort analysis, retention curves, time-to-value y detección del Aha! Moment</li>
+
+          <li><strong>Experimentación como herramienta analítica:</strong> usar A/B tests no solo para optimizar sino para aprender sobre el comportamiento del usuario</li>
+
+          <li><strong>Product Analytics para growth:</strong> identificar los comportamientos que predicen retención y convertirlos en features de onboarding</li>
+
+        </ul>
+
+        <div class="tags">
+
+          <span class="tag">North Star Metric</span>
+
+          <span class="tag">Hipótesis</span>
+
+          <span class="tag">Cohort Analysis</span>
+
+          <span class="tag">Aha! Moment</span>
+
+          <span class="tag">Growth Analytics</span>
+
+        </div>
+
+      </div>
+
+      <div class="block trends">
+
+        <div class="blabel"><span class="pip"></span>Tendencias 2026</div>
+
+        <div class="titem"><span class="ticon">🗄️</span><div><strong>Self-Serve Analytics obligatorio:</strong> Amplitude, Posthog y Mixpanel permiten al PM consultar sus propias métricas — SQL básico es ya una competencia core no negociable, no un plus técnico</div></div>
+
+        <div class="titem"><span class="ticon">🔮</span><div><strong>Analítica predictiva accesible:</strong> modelos de churn prediction integrados en plataformas como Amplitude Charts detectan automáticamente qué cohorte cancelará — el PM actúa antes de que ocurra, no después</div></div>
+
+        <div class="titem"><span class="ticon">🧠</span><div><strong>AI para generación de insights:</strong> herramientas como "Ask Amplitude" responden preguntas en lenguaje natural sobre los datos del producto — democratizando el análisis sin perder rigor</div></div>
+
+        <div class="titem"><span class="ticon">🔒</span><div><strong>Privacy-First Analytics:</strong> mundo post-cookies — el PM debe entender server-side tracking, modelos de atribución probabilística y las implicaciones del GDPR y el EU AI Act en la recolección de datos</div></div>
+
+        <div class="titem"><span class="ticon">📈</span><div><strong>Métricas de valor sobre métricas de volumen:</strong> las empresas más avanzadas han abandonado DAU/MAU como métricas primarias — ahora miden "tiempo en valor" y "frecuencia de comportamientos de alto valor"</div></div>
+
+      </div>
+
+      <div class="block practice">
+
+        <div class="blabel"><span class="pip"></span>Laboratorio Práctico</div>
+
+        <div class="pname">📊 Arquitectura de Métricas + Auditoría de Friction</div>
+
+        <p class="pdesc">Diseña el sistema completo de medición para un producto real e identifica los puntos de fricción que más impacto tienen en el growth.</p>
+
+        <ol class="psteps">
+
+          <li>Define la <strong>North Star Metric</strong> de un producto con justificación explícita: ¿por qué esta métrica captura valor para el usuario Y para el negocio simultáneamente?</li>
+
+          <li>Construye el árbol de inputs de la NSM con 3 niveles de métricas descendentes — identifica cuál mover primero tendría mayor impacto</li>
+
+          <li>Escribe <strong>3 hipótesis de crecimiento</strong> en formato estructurado: acción → métrica → magnitud esperada → mecanismo causal</li>
+
+          <li>Realiza una <strong>Auditoría de Friction</strong>: identifica los 5 pasos innecesarios en el onboarding de una app real que retrasan el Aha! Moment</li>
+
+          <li>Diseña el dashboard semanal del PM: qué 6 métricas revisas cada lunes y qué pregunta responde cada una</li>
+
+        </ol>
+
+        <span class="deliverable">📄 NSM Tree + 3 Hipótesis Estructuradas + Friction Audit + Dashboard Weekly</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ══ MODULE 4 ══ -->
+
+  <div class="module-card m4">
+
+    <div class="accent-bar"></div>
+
+    <div class="mod-header">
+
+      <div class="mod-num">04</div>
+
+      <div class="mod-meta">
+
+        <span class="mod-badge">Módulo 4 · Roadmaps & Ejecución</span>
+
+        <div class="mod-title">Build High-Velocity Product Roadmaps</div>
+
+        <div class="mod-desc">Construct a roadmap that bridges the gap between vision and execution. Master the transition to PRDs and leverage AI for rapid prototyping to prove value with unprecedented execution speed.</div>
+
+      </div>
+
+    </div>
+
+    <div class="mod-body">
+
+      <div class="block content">
+
+        <div class="blabel"><span class="pip"></span>Contenido Central</div>
+
+        <p class="intro">El roadmap es el puente entre la visión estratégica y el trabajo diario del equipo. Un buen roadmap comunica el "por qué" con tanta claridad como el "qué", y deja espacio para responder al aprendizaje continuo sin romper la confianza de los stakeholders. La IA transforma la velocidad de prototipado: lo que antes tomaba semanas ahora toma horas.</p>
+
+        <ul class="ilist">
+
+          <li><strong>Roadmap como herramienta de comunicación estratégica:</strong> el formato Now-Next-Later para alinear sin crear compromisos rígidos de fecha</li>
+
+          <li><strong>Transición de features a outcomes en el roadmap:</strong> cómo reescribir "construir X feature" como "resolver Y problema para Z usuario medido por W métrica"</li>
+
+          <li><strong>PRDs modernos con IA:</strong> estructura, nivel de detalle correcto y uso de LLMs para generar borradores, edge cases y criterios de aceptación en minutos</li>
+
+          <li><strong>Priorización con datos:</strong> frameworks RICE, ICE y WSJF — cómo decir "No" con evidencia en lugar de con opinión</li>
+
+          <li><strong>Rapid Prototyping con IA:</strong> herramientas no-code (v0.dev, Bolt, Framer) para crear prototipos funcionales que prueban valor antes de comprometer ingeniería</li>
+
+          <li><strong>Gestión de dependencias y trade-offs:</strong> visualizar el costo de oportunidad de cada decisión de priorización para stakeholders no técnicos</li>
+
+        </ul>
+
+        <div class="tags">
+
+          <span class="tag">Now-Next-Later</span>
+
+          <span class="tag">PRDs con IA</span>
+
+          <span class="tag">WSJF</span>
+
+          <span class="tag">Rapid Prototyping</span>
+
+          <span class="tag">Trade-offs</span>
+
+        </div>
+
+      </div>
+
+      <div class="block trends">
+
+        <div class="blabel"><span class="pip"></span>Tendencias 2026</div>
+
+        <div class="titem"><span class="ticon">⚡</span><div><strong>Full-Stack PM con IA:</strong> los PMs que usan v0.dev, Cursor o Bolt para construir prototipos funcionales en 4 horas tienen una ventaja decisiva — pueden mostrar en lugar de describir, acelerando la validación y el alineamiento del equipo</div></div>
+
+        <div class="titem"><span class="ticon">📝</span><div><strong>IA como co-autor de PRDs:</strong> Claude y GPT generan primeros borradores completos de PRDs con edge cases, criterios de aceptación y casos de uso en minutos — el PM se convierte en editor estratégico, no escritor técnico</div></div>
+
+        <div class="titem"><span class="ticon">🔄</span><div><strong>Continuous Roadmapping:</strong> revisiones bi-semanales del roadmap reemplazan la planificación trimestral rígida — los equipos más ágiles ajustan prioridades en respuesta a señales del mercado sin perder dirección estratégica</div></div>
+
+        <div class="titem"><span class="ticon">🤝</span><div><strong>Engineering Partnership profundo:</strong> los PMs que entienden arquitectura de sistemas, APIs y tradeoffs técnicos toman mejores decisiones de scope — y construyen una relación de confianza con el equipo de ingeniería que acelera la ejecución</div></div>
+
+        <div class="titem"><span class="ticon">🚩</span><div><strong>Feature Flags como estrategia de roadmap:</strong> desacoplar el deployment del lanzamiento permite controlar el rollout con precisión quirúrgica y revertir sin incidentes — el PM como dueño de la estrategia de release, no solo del backlog</div></div>
+
+      </div>
+
+      <div class="block practice">
+
+        <div class="blabel"><span class="pip"></span>Laboratorio Práctico</div>
+
+        <div class="pname">⚡ Sprint de IA (4h) + Simulación de Trade-offs</div>
+
+        <p class="pdesc">Construye algo real en 4 horas con IA y defiende decisiones de priorización difíciles ante un stakeholder que siempre quiere más.</p>
+
+        <ol class="psteps">
+
+          <li><strong>Sprint de IA (máximo 4 horas):</strong> usa v0.dev, Bolt o Framer para crear un prototipo funcional clickeable de la oportunidad #1 del Módulo 2 — no un mockup estático, sino algo que puedas mostrar a un usuario real</li>
+
+          <li>Genera con un LLM el <strong>PRD completo</strong>: propósito, usuarios objetivo, criterios de éxito medibles, edge cases y out-of-scope explícito</li>
+
+          <li>Prioriza 8 iniciativas del backlog usando <strong>WSJF</strong> y construye el roadmap Now-Next-Later resultante</li>
+
+          <li><strong>Simulación de Trade-offs:</strong> un stakeholder senior exige agregar un feature urgente no planificado — muestra visualmente qué 3 iniciativas del roadmap mueren o se retrasan si se acepta, y presenta tu recomendación</li>
+
+          <li>Escribe el email de respuesta al stakeholder: explica la decisión con datos, sin confrontación y sin perder la relación</li>
+
+        </ol>
+
+        <span class="deliverable">📄 Prototipo Funcional + PRD Completo + Roadmap Visual + Email de Trade-off</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ══ MODULE 5 ══ -->
+
+  <div class="module-card m5">
+
+    <div class="accent-bar"></div>
+
+    <div class="mod-header">
+
+      <div class="mod-num">05</div>
+
+      <div class="mod-meta">
+
+        <span class="mod-badge">Módulo 5 · Experimentación & Validación</span>
+
+        <div class="mod-title">Run Effective Product Experimentation</div>
+
+        <div class="mod-desc">Master the mechanics of A/B testing and evidence-based decision making to drive product learning. Analyze results from experiments to validate hypotheses and confidently ship, kill, or pivot.</div>
+
+      </div>
+
+    </div>
+
+    <div class="mod-body">
+
+      <div class="block content">
+
+        <div class="blabel"><span class="pip"></span>Contenido Central</div>
+
+        <p class="intro">La experimentación transforma las opiniones en evidencia y las decisiones en aprendizaje acumulado. Este módulo te da el sistema completo: desde diseñar un experimento riguroso hasta interpretar sus resultados con honestidad intelectual y tomar la decisión correcta de ship, kill o pivot sin anclas emocionales.</p>
+
+        <ul class="ilist">
+
+          <li><strong>Mecánicas del A/B testing:</strong> grupos de control y tratamiento, tamaño de muestra, duración mínima y contaminación entre grupos</li>
+
+          <li><strong>Estadística para PMs sin fórmulas:</strong> entender el p-value, la significancia estadística y la significancia práctica — la diferencia entre "estadísticamente significativo" y "relevante para el negocio"</li>
+
+          <li><strong>Tipos de MVPs:</strong> Concierge (manual detrás de la cortina), Wizard of Oz (automatización simulada) y Smoke Test (landing de validación de demanda) — cuándo usar cada uno</li>
+
+          <li><strong>Análisis de resultados:</strong> cómo leer un experimento sin sesgos de confirmación — qué hacer cuando los resultados son ambiguos o contradictorios</li>
+
+          <li><strong>Framework Ship-Kill-Pivot:</strong> criterios predefinidos para cada decisión — evitar que las decisiones post-experimento sean políticas en lugar de basadas en evidencia</li>
+
+          <li><strong>Post-mortem de experimentos:</strong> convertir experimentos fallidos en ventajas de aprendizaje organizacional que aceleran los siguientes ciclos</li>
+
+        </ul>
+
+        <div class="tags">
+
+          <span class="tag">A/B Testing</span>
+
+          <span class="tag">Smoke Tests</span>
+
+          <span class="tag">MVPs</span>
+
+          <span class="tag">Ship-Kill-Pivot</span>
+
+          <span class="tag">Bayesian Testing</span>
+
+        </div>
+
+      </div>
+
+      <div class="block trends">
+
+        <div class="blabel"><span class="pip"></span>Tendencias 2026</div>
+
+        <div class="titem"><span class="ticon">🎯</span><div><strong>Smoke Test antes de construir:</strong> crear una landing page funcional que mide demanda real con un botón "Empieza ahora" antes de escribir una línea de código — la validación más barata posible y la más honesta</div></div>
+
+        <div class="titem"><span class="ticon">📈</span><div><strong>Bayesian A/B Testing mainstream:</strong> Statsig y Optimizely han adoptado modelos bayesianos que permiten decisiones continuas sin esperar muestra completa — acabando con el problema de "peekeamos el experimento a tiempo"</div></div>
+
+        <div class="titem"><span class="ticon">🤖</span><div><strong>Experimentos autooptimizantes con IA:</strong> modelos de personalización que se ajustan en tiempo real — el PM define el objetivo de negocio y el algoritmo encuentra la variante óptima automáticamente</div></div>
+
+        <div class="titem"><span class="ticon">🧠</span><div><strong>Pre-mortem obligatorio:</strong> antes de lanzar cualquier experimento, el equipo documenta explícitamente los sesgos cognitivos que podrían contaminar la interpretación — sesgo de confirmación, HIPPO effect y efecto Hawthorne</div></div>
+
+        <div class="titem"><span class="ticon">🏗️</span><div><strong>Experimentation as Infrastructure:</strong> plataformas como Statsig, LaunchDarkly y Eppo se convierten en infraestructura core del equipo de producto — tan importantes como el CI/CD pipeline o el sistema de monitoreo</div></div>
+
+      </div>
+
+      <div class="block practice">
+
+        <div class="blabel"><span class="pip"></span>Laboratorio Práctico</div>
+
+        <div class="pname">🧪 Smoke Test Lab + Post-Mortem de Experimento</div>
+
+        <p class="pdesc">Valida demanda real sin construir nada y aprende más de un fracaso que de un éxito — las dos habilidades experimentales más honestas del programa.</p>
+
+        <ol class="psteps">
+
+          <li><strong>Smoke Test Lab:</strong> crea una landing page funcional en Carrd o Framer para una funcionalidad que aún no existe — incluye propuesta de valor, beneficios concretos y un botón de conversión real. Mide el CTR durante 48 horas</li>
+
+          <li>Define tu umbral de decisión previamente: "Si el CTR supera X% → construimos. Si es menor → matamos o pivotamos" — documenta el criterio antes de ver los datos</li>
+
+          <li>Diseña un <strong>A/B test completo</strong> para una hipótesis del Módulo 3: hipótesis, grupos, métricas primaria y guardrail, tamaño de muestra calculado y duración mínima</li>
+
+          <li>Simula 3 escenarios de resultados — positivo claro, negativo claro y ambiguo — y escribe la decisión <strong>Ship-Kill-Pivot</strong> con justificación para cada uno</li>
+
+          <li>Escribe el <strong>Post-Mortem</strong> de un experimento real o ficticio que "falló": qué aprendiste sobre el usuario, sobre el producto y sobre cómo diseñar mejor el próximo experimento</li>
+
+        </ol>
+
+        <span class="deliverable">📄 Smoke Test Landing + A/B Test Design + 3 Decisiones Ship-Kill-Pivot + Post-Mortem</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ══ MODULE 6 ══ -->
+
+  <div class="module-card m6">
+
+    <div class="accent-bar"></div>
+
+    <div class="mod-header">
+
+      <div class="mod-num">06</div>
+
+      <div class="mod-meta">
+
+        <span class="mod-badge">Módulo 6 · Go-To-Market & Escala</span>
+
+        <div class="mod-title">Launch Impactful GTM Plans</div>
+
+        <div class="mod-desc">Orchestrate a comprehensive launch checklist and coordinate cross-functional teams for a live release. Define your distribution channels and track post-launch metrics to measure market success.</div>
+
+      </div>
+
+    </div>
+
+    <div class="mod-body">
+
+      <div class="block content">
+
+        <div class="blabel"><span class="pip"></span>Contenido Central</div>
+
+        <p class="intro">Un gran producto mal lanzado muere en el olvido. El GTM plan es la última milla del valor: la diferencia entre un producto que el mercado adopta y uno que nadie descubre. Aprenderás a orquestar el lanzamiento como director de una sinfonía cross-funcional, a definir los canales correctos de distribución y a medir el éxito de mercado con rigor post-lanzamiento.</p>
+
+        <ul class="ilist">
+
+          <li><strong>Checklist de lanzamiento integral:</strong> todos los equipos, todos los owners, todas las fechas — producto, ingeniería, marketing, soporte, legal y finanzas</li>
+
+          <li><strong>Coordinación cross-funcional:</strong> cómo alinear equipos con agendas y métricas distintas hacia un lanzamiento coherente sin autoridad formal</li>
+
+          <li><strong>Estrategia de distribución:</strong> seleccionar los canales correctos (inbound, PLG, sales-assisted, community) según el perfil del usuario y el modelo de negocio</li>
+
+          <li><strong>Segmentación del rollout:</strong> alpha → beta → GA con criterios de avance medibles y gates de decisión explícitos</li>
+
+          <li><strong>Métricas post-lanzamiento:</strong> definir antes del lanzamiento qué significa "éxito en 7, 30 y 90 días" — adopción, activación, retención y revenue por cohorte</li>
+
+          <li><strong>Positioning y messaging:</strong> método April Dunford para comunicar valor diferencial con precisión a cada segmento de mercado</li>
+
+        </ul>
+
+        <div class="tags">
+
+          <span class="tag">Launch Checklist</span>
+
+          <span class="tag">Cross-Functional</span>
+
+          <span class="tag">Distribución</span>
+
+          <span class="tag">Post-Launch Metrics</span>
+
+          <span class="tag">April Dunford</span>
+
+        </div>
+
+      </div>
+
+      <div class="block trends">
+
+        <div class="blabel"><span class="pip"></span>Tendencias 2026</div>
+
+        <div class="titem"><span class="ticon">👥</span><div><strong>Community-Led GTM:</strong> construir una audiencia antes del lanzamiento — waitlists en Discord y comunidades de LinkedIn generan adopción orgánica el día 1 sin presupuesto de marketing, como lo hicieron Figma, Linear y Notion</div></div>
+
+        <div class="titem"><span class="ticon">📱</span><div><strong>In-App GTM como canal primario:</strong> tooltips contextuales, product tours y modales de activación tienen 5-8x más conversión que emails de onboarding — el lanzamiento empieza dentro del producto, no en la bandeja de entrada del usuario</div></div>
+
+        <div class="titem"><span class="ticon">🚀</span><div><strong>Dark Launches como práctica estándar:</strong> desplegar código en producción sin activarlo para usuarios permite detectar problemas de rendimiento a escala antes de comprometer la experiencia del usuario en el lanzamiento real</div></div>
+
+        <div class="titem"><span class="ticon">🛡️</span><div><strong>Ética y privacidad como parte del GTM:</strong> el EU AI Act obliga a que el PM evalúe riesgos de sesgo algorítmico y privacidad antes del lanzamiento de cualquier feature con IA — ya no es responsabilidad exclusiva del equipo legal</div></div>
+
+        <div class="titem"><span class="ticon">📊</span><div><strong>Revenue Intelligence post-launch:</strong> conectar eventos de producto con ARR, NRR y expansión — los PMs más avanzados miden el impacto de cada lanzamiento en el P&L del producto, no solo en métricas de uso</div></div>
+
+      </div>
+
+      <div class="block practice">
+
+        <div class="blabel"><span class="pip"></span>Laboratorio Práctico</div>
+
+        <div class="pname">🚀 Launch Plan 360° + Crisis Communication Playbook</div>
+
+        <p class="pdesc">Diseña el lanzamiento completo del feature del Módulo 4 — checklist, canales, métricas de éxito — y prepara el plan de respuesta para cuando algo sale mal.</p>
+
+        <ol class="psteps">
+
+          <li>Construye el <strong>checklist de lanzamiento completo</strong> por equipo: producto, ingeniería, QA, diseño, marketing, soporte, legal y finanzas — cada ítem con owner asignado, fecha y criterio de "done"</li>
+
+          <li>Escribe el <strong>positioning statement</strong> con el canvas de April Dunford: para quién es, cuál es la alternativa actual del usuario, qué atributo diferencial tiene tu solución, y qué valor habilita ese atributo</li>
+
+          <li>Define los canales de distribución del lanzamiento y justifica por qué son los correctos para el perfil de tu usuario — incluye el plan de rollout alpha (5%) → beta (20%) → GA (100%) con criterios de avance</li>
+
+          <li>Define las métricas de éxito a <strong>7, 30 y 90 días post-lanzamiento</strong> — adopción, activación, retención y revenue — con umbrales de "éxito", "alerta" y "falla" para cada una</li>
+
+          <li><strong>Crisis Communication Playbook:</strong> escribe el plan de respuesta para 2 escenarios — caída crítica del servicio de más de 4 horas y filtración de datos de usuarios — incluyendo mensajes internos y comunicación pública</li>
+
+        </ol>
+
+        <span class="deliverable">📄 Launch Checklist Completo + Positioning Canvas + Métricas 7/30/90 días + Crisis Playbook</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+</div><!-- /modules -->
+
+
+
+<!-- MASTERY -->
+
+<section class="mastery" id="mastery">
+
+  <div class="mastery-title">Tu Ruta de Maestría Individual</div>
+
+  <p class="mastery-sub">El programa construye los cimientos. La maestría viene de aplicarlo en tu contexto real, de manera consistente, durante meses — no semanas.</p>
+
+  <div class="mastery-grid">
+
+    <div class="mcard">
+
+      <div class="mcard-icon">📚</div>
+
+      <div class="mcard-title">Lectura Canónica</div>
+
+      <div class="mcard-body">
+
+        Empieza con <strong>Inspired</strong> de Marty Cagan — el PM moderno como arquitecto del discovery, no como gestor de backlog. Continúa con <strong>Continuous Discovery Habits</strong> de Teresa Torres para internalizar el sistema operativo de los mejores equipos. Cierra con <strong>Obviously Awesome</strong> de April Dunford para dominar el positioning. Añade <strong>The Lean Startup</strong> de Eric Ries para la mentalidad de validación rápida y barata.
+
+        <div><span class="mhighlight">4 libros · 1 por mes · en ese orden</span></div>
+
+      </div>
+
+    </div>
+
+    <div class="mcard">
+
+      <div class="mcard-icon">🎓</div>
+
+      <div class="mcard-title">Certificación Complementaria</div>
+
+      <div class="mcard-body">
+
+        Con perfil <strong>PMP</strong>, la brecha más crítica es la técnica y la de IA. Busca el <strong>"AI Product Management Specialization"</strong> en Coursera (Product School + Google) para cerrar la brecha técnica. Complementa con el curso de <strong>SQL para Analítica de Datos</strong> en Mode Analytics o DataCamp. El objetivo es concreto: nunca depender de un data analyst para consultar tus propias métricas de producto.
+
+        <div><span class="mhighlight">3-4 meses · dedicación parcial · ROI inmediato</span></div>
+
+      </div>
+
+    </div>
+
+    <div class="mcard">
+
+      <div class="mcard-icon">🎯</div>
+
+      <div class="mcard-title">Hito Personal — 30 Días</div>
+
+      <div class="mcard-body">
+
+        En tu rol actual, <strong>sustituye un roadmap de fechas y funciones por uno de problemas y métricas</strong> durante un mes. Preséntalo como un experimento, no como una imposición. Documenta la reacción de tu equipo y stakeholders — la resistencia que encuentres te dirá más sobre la cultura de tu organización que cualquier framework. Ese caso de estudio real es tu argumento más poderoso en una entrevista de PM senior.
+
+        <div><span class="mhighlight">Comienza esta semana · no esperes el momento perfecto</span></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<footer class="footer">
+
+  <div class="footer-brand">PM Certification · Edición Definitiva 2026</div>
+
+  <div class="footer-note">Fiel a los propósitos originales del programa · Enriquecido con tendencias 2026 · Marcos: Cagan · Torres · Dunford · Ries · Amazon PR/FAQ</div>
+
+</footer>
+
+
+
+</body>
+
+</html>
